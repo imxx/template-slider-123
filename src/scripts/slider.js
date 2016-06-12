@@ -20,9 +20,6 @@
         this.sliderPadding = 50;
         this.slidePadding = 21;
 
-        console.log(automoving);
-
-
         this.slidesHtml = Array.prototype.slice.call(el.children, 0);
         this.slidesHtmlOriginalLength = this.slidesHtml.length,
         this.addAuxillarySlides();
@@ -32,13 +29,12 @@
         this.slideWithPaddingWidth = (this.slideWidth + this.slidePadding * 2);
         this.sliderStartingPosition = this.slideWithPaddingWidth  * this.slidesOnTheScreen;
         this.currentIndex = this.slidesOnTheScreen;
-        this.pagerIndex = 0;
 
         /*
         *
         *   Creating html for slider
         *
-        */ 
+        */
         
         this.slideLis = this.prepareSliderLiHtml();
 
