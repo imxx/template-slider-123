@@ -35,11 +35,6 @@
         *   Creating html for slider
         *
         */
-        
-        this.slideLis = this.prepareSliderLiHtml();
-
-        if(this.paging)
-            this.pageThumbnails = this.preparePagerLiHtml();
 
         el.innerHTML = this.prepareFullSliderHtml();
 
@@ -57,8 +52,10 @@
         el.querySelector(".right-slider-arrow")
             .addEventListener("click", this.goToNext.bind(this));
 
-        this.pager = el.querySelector(".slider-pager");
-        this.pager.addEventListener("click", this.pagerCallback.bind(this));
+        if(this.paging){
+            this.pager = el.querySelector(".slider-pager");
+            this.pager.addEventListener("click", this.pagerCallback.bind(this));
+        }
 
         if(automoving)
             setInterval(function(){
@@ -139,10 +136,10 @@
         var sliderInnerHtml = [
                     "<div class='left-slider-arrow'><</div>",
                     "<div class='right-slider-arrow'>></div>",
-                    "<ul class='slider-pager'>", this.pageThumbnails, "</ul>",
+                    "<ul class='slider-pager'>", (this.paging) ? this.preparePagerLiHtml() : "", "</ul>",
                     "<div class='slide-frame'>",
                         "<ul class='sliders-lane' style='width:", this.ulWidth, "px;left:-", this.sliderStartingPosition,"px'>",
-                            this.slideLis,
+                            this.prepareSliderLiHtml(),
                         "</ul>",
                     "</div>"
                 ];
