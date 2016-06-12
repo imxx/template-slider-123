@@ -225,6 +225,11 @@ body {
   box-shadow: 0 0 18px 2px rgba(0, 0, 0, 0.74);
   overflow: hidden;
 }
+@-moz-document url-prefix() {
+  .box-decorator {
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.74);
+  }
+}
 .hidden {
   display: none;
 }
