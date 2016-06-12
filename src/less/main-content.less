@@ -1,0 +1,88 @@
+.main-content{
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    };
+}
+
+.articles{
+    float: left;
+    width: 37.625rem;
+}
+
+.article{
+    border-top: 1px solid transparent;
+    min-height: 11.875rem;
+    margin-bottom: 2.625rem;
+    padding: 0.625rem 0.75rem 2.25rem 0.875rem;
+
+    &:last-child{
+        margin-bottom: 0;
+    };
+
+    h1{
+        float: left;
+        font-size: 1.563rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    time{
+        float: right;
+        font-size: 1.563rem;
+    }
+
+    p{
+        clear: both;
+        margin: 0;
+        margin-top: 2.25rem;
+        font-size: 0.75rem;
+        font-weight: 300;
+    };
+}
+
+.search{
+
+    width: 17.45rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+
+    span{
+        font-size: 1.563rem;
+        text-align: center;
+        display: block;
+        text-transform: uppercase;
+        background-color: #000;
+        color: #fff;
+        padding: 0.6rem 0;
+        margin: 0;
+    }
+}
+
+
+.slide-content{
+    text-align: center;
+
+    h3{
+        font-family: MyriadProRegular;
+        font-size: 2.25rem;
+        color: white;
+        font-weight: 300;
+        margin: 0;
+        padding-top: 0.20rem;
+    }
+
+    p{
+
+        font-family: MosaicleafRegular;
+        font-size: 9.9rem;
+        line-height: 1;
+        margin: 0;
+        margin-top: -.4rem;
+    }
+}

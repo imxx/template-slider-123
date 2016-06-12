@@ -1,0 +1,83 @@
+.header{
+    color: #fff;
+}
+
+.main-navigation{
+    background-color: #000;
+    font-size: 0.875rem;
+    position: relative;
+    z-index: 2;
+
+
+    h1{
+        font-size: 0.875rem;
+        float: left;
+        margin: 0.625rem 0 0.625rem 4.125rem;
+        font-weight: 300;
+    }
+
+    nav{
+        float:right;
+        margin-right: 20.625rem;
+        width: 22.75rem;
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        font-size: 0;
+
+        li{
+            display: inline-block;
+
+            &:hover{
+                background-color: lighten(rgb(0,0,0), 30);
+            };
+
+            a{
+                display: inline-block;
+                width: 7.583rem;
+                padding-top: .625rem;
+                padding-bottom: .625rem;
+                font-size: 0.875rem;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+
+.main-logo{
+    position: relative;
+    z-index: 1;
+    left: 20.625rem;
+    right: 20.625rem;
+    width: 22.75rem;
+    background-color: #094391;
+    overflow: hidden;
+    text-align: center;
+    border-bottom-left-radius: 5rem 3.5rem;
+    border-bottom-right-radius: 5rem 3.5rem; /* FF3.6-15 */
+    background: -webkit-linear-gradient(rgba(0,0,0,1) 0%, rgba(11,79,169,1) 100%);
+    background: -o-linear-gradient(rgba(0,0,0,1) 0%, rgba(11,79,169,1) 100%);
+    background: linear-gradient(rgba(0,0,0,1) 0%, rgba(11,79,169,1) 100%); /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#0b4fa9',GradientType=0 ); /* IE6-9 */
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.75);
+
+    h2{
+        font-size: 4.5rem;
+        text-shadow: -2px 3px 8px rgba(0, 0, 0, 0.75);
+        margin: 5rem 0 0 0;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    h3{
+        font-size: 1.125rem;
+        text-shadow: -2px 3px 8px rgba(0, 0, 0, 0.75);
+        margin-bottom: 3.5rem;
+        font-weight: 300;
+    }
+}

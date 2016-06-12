@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "MyriadProRegular";
+    src: url("/fonts/myriadpro-regular/MyriadPro-Regular.eot");
+    src: url("/fonts/myriadpro-regular/MyriadPro-Regular.eot?#iefix")format("embedded-opentype"),
+    url("/fonts/myriadpro-regular/MyriadPro-Regular.woff") format("woff"),
+    url("/fonts/myriadpro-regular/MyriadPro-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "MosaicleafRegular";
+    src: url("/fonts/mosaicleaf-regular/Mosaicleaf086.eot");
+    src: url("/fonts/mosaicleaf-regular/Mosaicleaf086.eot?#iefix")format("embedded-opentype"),
+    url("/fonts/mosaicleaf-regular/Mosaicleaf086.woff") format("woff"),
+    url("/fonts/mosaicleaf-regular/Mosaicleaf086.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "PTSansNarrow";
+    src: url("/fonts/ptsans/ptsans-narrow.eot");
+    src: url("/fonts/ptsans/ptsans-narrow.eot?#iefix")format("embedded-opentype"),
+    url("/fonts/ptsans/ptsans-narrow.woff") format("woff"),
+    url("/fonts/ptsans/ptsans-narrow.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+html, body{
+    font-size: 100%;
+    font-family: Arial, sans-serif;
+    background-color: lighten(rgb(255, 174, 72), 25);
+}
+
+.main-container{
+    margin: 0 auto;
+    max-width: 64rem;
+    background: #ffae48;
+    background: -moz-linear-gradient(top, rgba(255,175,75,1) 0%, rgba(255,146,10,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(255,175,75,1) 0%,rgba(255,146,10,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#ff920a',GradientType=0 ); /* IE6-9 */
+}
+
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.adjuster{
+    margin: 0 3.125rem;
+    position: relative;
+
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    };
+}
+
+.box-decorator{
+    background-color: #ebebd1;
+    border-radius: .5rem;
+    box-shadow: 0 0 18px 2px rgba(0, 0, 0, 0.74);
+    overflow: hidden;
+}
+
+.hidden{
+    display: none;
+}
+
+.notransition{
+    transition: none !important;
+}
+
+.bg-darkgreen{
+    background-color: #1b4801;
+}
+
+.bg-green{
+    background-color: #008c00;
+}
+
+.bg-maroon{
+    background-color: #6d0019;
+}
+
+.bg-darkblue{
+    background-color: #021227;
+}
+
+.text-black{
+    color: #000;
+}
+
+.text-lightgreen{
+    color: #43a312;
+}
+
+.text-darkmaroon{
+    color: #30000b;
+}
+
+.text-lightblue{
+    color: #0a4ba1;
+}
