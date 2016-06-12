@@ -2,6 +2,7 @@
 
 var express = require('express'),
     app = express(),
+    path = require("path"),
     port = process.env.PORT || 5000,
     environment = process.env.NODE_ENV;
 
@@ -10,7 +11,7 @@ switch(environment){
     case "production":
         app.use(express.static("./build"));
         app.get("/*", function(req, res){
-            res.sendfile("./build/index.html");
+            res.sendFile(path.join(__dirname+"/build/index-12d72601cf.html"));
         });
         break;
 
@@ -21,12 +22,6 @@ switch(environment){
         });
         break;
 }
-
-app.use(express.static('public'));
-app.use(express.static("libs"))
-app.get('/', function(req, res) {
-    res.sendFile('./public/index.html');
-});
 
 app.listen(port, function() {
     console.log(

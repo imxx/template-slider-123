@@ -64,7 +64,11 @@ gulp.task("prepare-for-build", ["copy-fonts"], function(){
     return gulp.src("./src/index.html")
                 .pipe($.useref({ searchPath: "./src/" }))
                 .pipe($.if("*.css", $.csso()))
-                .pipe($.if("*.js", $.uglify({ debug: true })))
+                .pipe($.if("*.js", $.uglify()))
+                .pipe($.rev())
+                .pipe($.revReplace())
+                .pipe(gulp.dest("./build/"))
+                .pipe($.rev.manifest())
                 .pipe(gulp.dest("./build/"));
 });
 
