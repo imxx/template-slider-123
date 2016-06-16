@@ -175,14 +175,14 @@
 @font-face {
   font-family: "MosaicleafRegular";
   src: url("/fonts/mosaicleaf-regular/Mosaicleaf086.eot");
-  src: url("/fonts/mosaicleaf-regular/Mosaicleaf086.eot?#iefix") format("embedded-opentype"), url("/fonts/mosaicleaf-regular/Mosaicleaf086.woff") format("woff"), url("/fonts/mosaicleaf-regular/Mosaicleaf086.ttf") format("truetype");
+  src: url("/fonts/mosaicleaf-regular/Mosaicleaf086.eot?#iefix") format("embedded-opentype"), url("/fonts/mosaicleaf-regular/Mosaicleaf086.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "PTSansNarrow";
   src: url("/fonts/ptsans/ptsans-narrow.eot");
-  src: url("/fonts/ptsans/ptsans-narrow.eot?#iefix") format("embedded-opentype"), url("/fonts/ptsans/ptsans-narrow.woff") format("woff"), url("/fonts/ptsans/ptsans-narrow.ttf") format("truetype");
+  src: url("/fonts/ptsans/ptsans-narrow.eot?#iefix") format("embedded-opentype"), url("/fonts/ptsans/ptsans-narrow.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -194,7 +194,7 @@ body {
 }
 .main-container {
   margin: 0 auto;
-  max-width: 64rem;
+  width: 64rem;
   background: #ffae48;
   background: -moz-linear-gradient(top, #ffaf4b 0%, #ff920a 100%);
   /* FF3.6-15 */
