@@ -63,7 +63,17 @@
             }, automovingInterval);
 
 
+        /*
+        *
+        *   Returning API
+        *
+        */
 
+        return {
+            goToNext: this.goToNext.bind(this),
+            goToPrev: this.goToPrev.bind(this),
+            setSlide: this.setSlide.bind(this),
+        }
     };
 
     Slider.prototype.addAuxillarySlides = function(){
@@ -149,8 +159,9 @@
 
     Slider.prototype.pagerCallback = function(e){
         if(e.target.nodeName === "LI"){
-            this.setActivePage(parseInt(e.target.innerHTML));
-            this.goTo(parseInt(e.target.innerHTML) * this.step + this.slidesOnTheScreen);
+            //this.setActivePage(parseInt(e.target.innerHTML));
+            //this.goTo(parseInt(e.target.innerHTML) * this.step + this.slidesOnTheScreen);
+            this.setSlide(parseInt(e.target.innerHTML));
         }
     };
 
@@ -177,11 +188,16 @@
         this.goTo(this.currentIndex + this.step);
     };
 
+    Slider.prototype.setSlide = function(index){
+        this.goTo(index  * this.step + this.slidesOnTheScreen);
+    }
+
     Slider.prototype.goTo = function(index) {
+        var beyondTheRightBorder = this.slidesLength - index - this.step;
+
         this.ul.style.left = '-' + (this.slideWithPaddingWidth * index) + 'px';
 
-        var beyondTheRightBorder = this.slidesLength - index - this.step;
-        if(beyondTheRightBorder < this.slidesOnTheScreen && index > 0){
+        if(beyondTheRightBorder < this.slidesOnTheScreen){
 
             this.currentIndex = this.slidesOnTheScreen;
             this.moveSlidesSilently();
