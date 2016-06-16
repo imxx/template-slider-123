@@ -11,7 +11,7 @@ switch(environment){
     case "production":
         app.use(express.static("./build"));
         app.get("/*", function(req, res){
-            res.sendFile(path.join(__dirname+"/build/index-12d72601cf.html"));
+            res.sendFile(path.join(__dirname+"/build/index-12d72601cff.html"));
         });
         break;
 
